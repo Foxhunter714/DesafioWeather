@@ -2,7 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="daily"
+            type="cl.desafiolatam.desafioweather.DailyWeather" />
 
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +20,7 @@
             style="@style/Header"
             android:layout_width="135dp"
             android:layout_height="66dp"
-            android:text="Hello World!"
+            android:text="@{daily.ciudad}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.464"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -32,7 +37,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="173dp"
             android:layout_marginBottom="24dp"
-            android:text="TextView"
+            android:text="@{daily.fecha}"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.446"
@@ -64,7 +69,7 @@
             android:layout_marginTop="64dp"
             android:layout_marginEnd="200dp"
             android:layout_marginBottom="180dp"
-            android:text="TextView"
+            android:text="@{daily.temperatura"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -81,7 +86,7 @@
             android:layout_marginTop="64dp"
             android:layout_marginEnd="150dp"
             android:layout_marginBottom="180dp"
-            android:text="TextView"
+            android:text="@{daily.unidad}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView4"
