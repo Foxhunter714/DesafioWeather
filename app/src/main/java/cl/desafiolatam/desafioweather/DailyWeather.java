@@ -6,6 +6,18 @@ public class DailyWeather {
     private String imagen;
     private String temperatura;
     private String unidad;
+    private String temperaturaMin;
+    private String temperaturaMax;
+
+    public DailyWeather(String ciudad, String fecha, String imagen, String temperatura, String unidad, String temperaturaMin, String temperaturaMax) {
+        this.ciudad = ciudad;
+        this.fecha = fecha;
+        this.imagen = imagen;
+        this.temperatura = temperatura;
+        this.unidad = unidad;
+        this.temperaturaMin = temperaturaMin;
+        this.temperaturaMax = temperaturaMax;
+    }
 
     @Override
     public String toString() {
@@ -15,7 +27,25 @@ public class DailyWeather {
                 ", imagen='" + imagen + '\'' +
                 ", temperatura='" + temperatura + '\'' +
                 ", unidad='" + unidad + '\'' +
+                ", temperaturaMin='" + temperaturaMin + '\'' +
+                ", temperaturaMax='" + temperaturaMax + '\'' +
                 '}';
+    }
+
+    public String getTemperaturaMin() {
+        return temperaturaMin;
+    }
+
+    public void setTemperaturaMin(String temperaturaMin) {
+        this.temperaturaMin = temperaturaMin;
+    }
+
+    public String getTemperaturaMax() {
+        return temperaturaMax;
+    }
+
+    public void setTemperaturaMax(String temperaturaMax) {
+        this.temperaturaMax = temperaturaMax;
     }
 
     public String getCiudad() {

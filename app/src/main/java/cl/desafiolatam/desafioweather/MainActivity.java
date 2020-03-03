@@ -14,9 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding viewDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        viewDataBinding.textView.setText("Santiago");
-        viewDataBinding.textView3.setText("3 de Abril");
-        viewDataBinding.textView4.setText("16 °");
-        viewDataBinding.textView5.setText("C");
+        DailyWeather dailyWeather = new DailyWeather("Santiago","3 de Abril","","16 °", "C", "1°","17");
+        viewDataBinding.setDaily(dailyWeather);
     }
 }
