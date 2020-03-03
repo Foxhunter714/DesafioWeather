@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding viewDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        viewDataBinding.textView.setText("Welcome again!");
+        viewDataBinding.textView.setText("Santiago");
+        viewDataBinding.textView3.setText("3 de Abril");
+        viewDataBinding.textView4.setText("16 °");
+        viewDataBinding.textView5.setText("C");
     }
 }
